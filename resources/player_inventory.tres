@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="InventoryModel" format=3 uid="uid://c1inoxy723f5c"]
+
+[ext_resource type="Script" uid="uid://c3u2vo823de2n" path="res://scripts/inventory/item_slot/ItemSlot.cs" id="1_1njko"]
+[ext_resource type="Resource" uid="uid://dl5t6xpwige24" path="res://resources/items/assault_rifle_item.tres" id="2_85a8j"]
+[ext_resource type="Resource" uid="uid://b0i8xq3jipyxg" path="res://resources/items/crystal_shard_item.tres" id="3_hfe8y"]
+[ext_resource type="Script" uid="uid://bla01mwpanx86" path="res://scripts/inventory/model/InventoryModel.cs" id="4_85a8j"]
+
+[sub_resource type="Resource" id="Resource_uptie"]
+script = ExtResource("1_1njko")
+Item = ExtResource("2_85a8j")
+metadata/_custom_type_script = "uid://c3u2vo823de2n"
+
+[sub_resource type="Resource" id="Resource_hh2y0"]
+script = ExtResource("1_1njko")
+Amount = 15
+Item = ExtResource("3_hfe8y")
+metadata/_custom_type_script = "uid://c3u2vo823de2n"
+
+[sub_resource type="Resource" id="Resource_1njko"]
+script = ExtResource("1_1njko")
+Item = ExtResource("2_85a8j")
+metadata/_custom_type_script = "uid://c3u2vo823de2n"
+
+[resource]
+script = ExtResource("4_85a8j")
+itemSlots = Array[ExtResource("1_1njko")]([null, SubResource("Resource_uptie"), SubResource("Resource_hh2y0"), null, null, null, SubResource("Resource_1njko"), null, null, null, null, null])
+metadata/_custom_type_script = "uid://bla01mwpanx86"

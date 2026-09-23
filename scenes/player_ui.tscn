@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b7b8htmn7s1gp"]
+
+[ext_resource type="PackedScene" uid="uid://c7ubh77srykaq" path="res://scenes/inventory_view.tscn" id="1_jkj6h"]
+[ext_resource type="Script" uid="uid://buw6syvnre7g" path="res://scenes/PlayerUI.cs" id="1_sk4pr"]
+
+[node name="PlayerUI" type="CanvasLayer" unique_id=1449446290 node_paths=PackedStringArray("_inventoryView")]
+script = ExtResource("1_sk4pr")
+_inventoryView = NodePath("InventoryView")
+
+[node name="InventoryView" parent="." unique_id=477021248 instance=ExtResource("1_jkj6h")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1

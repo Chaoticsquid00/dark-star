@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b0i8xq3jipyxg"]
+
+[ext_resource type="Script" uid="uid://sgd6mw0lvndu" path="res://scripts/item/Item.cs" id="1_ct4jc"]
+[ext_resource type="Texture2D" uid="uid://bg4mft0h6kckq" path="res://resources/sprites/crystal_shard_icon.tres" id="1_hh2y0"]
+
+[resource]
+script = ExtResource("1_ct4jc")
+Name = "Crystal Shard"
+Icon = ExtResource("1_hh2y0")
+Stackable = true
+metadata/_custom_type_script = "uid://sgd6mw0lvndu"

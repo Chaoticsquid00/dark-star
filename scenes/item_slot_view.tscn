@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://d4nrep8sldprx"]
+
+[ext_resource type="Script" uid="uid://32834gto56u4" path="res://scripts/inventory/item_slot/ItemSlotView.cs" id="1_2i4cc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pvmx"]
+bg_color = Color(0.26293245, 0.26293248, 0.26293233, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.40960348, 0.40960318, 0.40960324, 1)
+border_blend = true
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 7
+
+[sub_resource type="Gradient" id="Gradient_2i4cc"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.488)
+colors = PackedColorArray(0.28240728, 0.28240752, 0.28240746, 0.38431373, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gn6nf"]
+gradient = SubResource("Gradient_2i4cc")
+width = 70
+height = 70
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1.3, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 100
+
+[node name="ItemSlotView" type="AspectRatioContainer" unique_id=883445346 node_paths=PackedStringArray("amountLabel", "textureRect")]
+offset_right = 80.0
+offset_bottom = 80.0
+script = ExtResource("1_2i4cc")
+amountLabel = NodePath("AspectRatioContainer/TextMargin/RichTextLabel")
+textureRect = NodePath("AspectRatioContainer/TextureMargin/TextureRect")
+
+[node name="PanelContainer" type="Panel" parent="." unique_id=868222338]
+clip_contents = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3pvmx")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=1701730993]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer" unique_id=726688250]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_gn6nf")
+
+[node name="TextureMargin" type="MarginContainer" parent="AspectRatioContainer" unique_id=987090242]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer/TextureMargin" unique_id=816659566]
+layout_mode = 2
+
+[node name="TextMargin" type="MarginContainer" parent="AspectRatioContainer" unique_id=1723386075]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AspectRatioContainer/TextMargin" unique_id=707851785]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "100"

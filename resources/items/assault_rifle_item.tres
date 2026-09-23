@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dl5t6xpwige24"]
+
+[ext_resource type="Script" uid="uid://sgd6mw0lvndu" path="res://scripts/item/Item.cs" id="1_ay572"]
+[ext_resource type="Texture2D" uid="uid://ca4qlifp1qvb8" path="res://resources/sprites/assault_rifle_icon.tres" id="1_wcyu6"]
+
+[resource]
+script = ExtResource("1_ay572")
+Name = "AssaultRifle"
+Icon = ExtResource("1_wcyu6")
+metadata/_custom_type_script = "uid://sgd6mw0lvndu"

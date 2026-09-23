@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dmhiqmh2f0scv"]
+
+[ext_resource type="Script" uid="uid://sfc5btw7sfdo" path="res://scripts/InteractRay.cs" id="1_jrvnc"]
+
+[node name="InteractRay" type="RayCast3D" unique_id=1965148182]
+target_position = Vector3(0, 0, -5)
+script = ExtResource("1_jrvnc")

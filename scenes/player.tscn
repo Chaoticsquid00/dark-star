@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://xr1na7f76o1a"]
+
+[ext_resource type="Script" uid="uid://bknmtuohjh2xj" path="res://scripts/inventory/controller/InventoryController.cs" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://cbs1w5vqh27xd" path="res://scenes/Player.cs" id="1_qlg0r"]
+[ext_resource type="Resource" uid="uid://c1inoxy723f5c" path="res://resources/player_inventory.tres" id="2_dqkch"]
+[ext_resource type="PackedScene" uid="uid://dmhiqmh2f0scv" path="res://scenes/interact_ray.tscn" id="4_dqkch"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u5a77"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m6wgs"]
+
+[node name="Player" type="CharacterBody3D" unique_id=2053297175 node_paths=PackedStringArray("inventoryController")]
+script = ExtResource("1_qlg0r")
+inventoryController = NodePath("InventoryController")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=181254674]
+mesh = SubResource("CapsuleMesh_u5a77")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1272716836]
+shape = SubResource("CapsuleShape3D_m6wgs")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=787743113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="InteractRay" parent="." unique_id=1965148182 instance=ExtResource("4_dqkch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+target_position = Vector3(0, 0, -3)
+
+[node name="InventoryController" type="Node" parent="." unique_id=471171903]
+script = ExtResource("1_qhqgy")
+_inventoryModel = ExtResource("2_dqkch")
+metadata/_custom_type_script = "uid://bknmtuohjh2xj"
